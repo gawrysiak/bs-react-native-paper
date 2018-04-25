@@ -11,6 +11,12 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Null_undefined.({"title": from_opt(title), "theme": from_opt(theme)}),
+      Js.Null_undefined.(
+        {
+          "title": from_opt(title),
+          "theme": from_opt(theme),
+          "style": from_opt(style)
+        }
+      ),
     children
   );
